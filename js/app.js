@@ -1,14 +1,17 @@
 angular.module( "myFirstApp", ["ngRoute"] )
-	.config( ["$routeProvider", function ($routeProvider) {
-		$routeProvider.when("/about", {
-			templateUrl: "view/about.html"
+	.config( ["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
+		$routeProvider.when("/about/:parm1", {
+			templateUrl: "views/about.html",
+			controller: "AboutCtrl"
 		})
-		.when( "/contact", {
-			templateUrl: "view/contact.html"
+		.when( "/contact/:parm1", {
+			templateUrl: "views/contact.html",
+			controller: "ContactCtrl"
 		} )
 		.otherwise( {
-			templateUrl: "view/404.html"
-		} );
+			redirectTo: "/"
+		} )
+		$locationProvider.html5Mode(true);
 	}] )
 	.factory( "personService", function () {
 	
@@ -18,4 +21,5 @@ angular.module( "myFirstApp", ["ngRoute"] )
 			return firstName + " " + lastname;
 		};
 		return person;
-	} );
+	} )
+	

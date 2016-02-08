@@ -1,0 +1,20 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "angular learning",
+  "main": "simpleServer.js",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "morgan": "^1.6.1",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krut Aleks",
+  "license": "ISC"
+}
