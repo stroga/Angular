@@ -29,7 +29,8 @@ angular.module('eventApp', ['ngRoute'])
 
 		$routeProvider.when('/add-event', {
 				templateUrl: 'views/add-event.html',
-				controller: "formCtrl"
+				controller: "formCtrl",
+				controllerAs: "eventCtl"
 			})
 			.otherwise({
 				redirectTo: '/'
